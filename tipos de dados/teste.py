@@ -1,3 +1,0 @@
-# comentário. 
-
-print("Salve fml")
