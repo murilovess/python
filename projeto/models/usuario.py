@@ -21,7 +21,7 @@ class Usuario(Base):
         self.senha = senha
 
 
-# Criando tabela no banco de dados.from sqlalchemy import Column, String, Integer
+
 from sqlalchemy.orm import declarative_base
 from config.database import db
 
@@ -29,7 +29,7 @@ Base = declarative_base()
 
 
 class Usuario(Base):
-    # Definindo caracteristica da tabela no banco de dados.
+    
     __tablename__ = "usuarios"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -37,7 +37,6 @@ class Usuario(Base):
     email = Column(String(150))
     senha = Column(String(150))
 
-    # Definindo caracteristicas da classe.
     def __init__(self, nome: str, email: str, senha: str):
         self.nome = nome
         self.email = email
